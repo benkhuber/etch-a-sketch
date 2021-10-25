@@ -1,0 +1,12 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid red;
+    width: 400px;
+    height: 400px;
+}
+
+.content {
+    font-size: 10px;
+    border: 2px solid black;
+}
