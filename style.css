@@ -1,12 +1,17 @@
 #container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
     border: 2px solid red;
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
 }
 
-.content {
-    font-size: 10px;
-    border: 2px solid black;
+.gridcell {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.hover {
+    background-color: green;
 }
