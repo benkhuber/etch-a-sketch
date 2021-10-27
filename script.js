@@ -6,14 +6,14 @@ function makeGrid(rows, columns) {
     for (i = 0; i < (rows * columns); i++) {
         const div = document.createElement('div');
         div.classList.add('gridcell');
+        div.setAttribute('id', 'test');
         container.appendChild(div)
     }
 }
+let gridSize = prompt("Set your grid size:")
+makeGrid(gridSize, gridSize);
 
-makeGrid(16,16);
-
-const newDiv = document.querySelector('.gridcell');
-window.addEventListener('mouseover', function(e){
-    newDiv.classList.add('hover');
-    console.log(e);
+let test = document.getElementById('container');
+test.addEventListener('mouseover', function(event){
+    event.target.style.backgroundColor = "black";
 })
