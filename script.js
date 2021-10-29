@@ -15,10 +15,28 @@ function makeGrid(rows, columns) {
         }
     }
 }
-let gridSize = prompt("Set your grid size:")
+let gridSize = prompt("Set your grid size:");
 makeGrid(gridSize, gridSize);
 
-let test = document.getElementById('container');
-test.addEventListener('mouseover', function(event){
-    event.target.classList.add('hover');
-})
+function blackColor() {
+    let test = document.getElementById('container');
+    test.addEventListener('mouseover', function(event) {
+    event.target.style.backgroundColor = "black";
+    });
+}
+
+function crazyColor() {
+    let test = document.getElementById('container');
+    test.addEventListener('mouseover', function(event) {
+    event.target.style.backgroundColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    });
+} 
+
+function gradientColor() {
+    let index = 0;
+    let gradientColor = ["#e5e5e5", "#cccccc", "#b2b2b2"]
+    let test = document.getElementById('container');
+    test.addEventListener('mouseover', function(event) {
+    event.target.style.backgroundColor = gradientColor[index++];
+    });
+}

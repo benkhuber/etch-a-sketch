@@ -11,7 +11,11 @@
 <body>
     <div class="biggerbox"><div class="header">Etch-A-Sketch!</div>
     <div class="bigbox">
-    <input class="button" type="reset" value="Reset" onClick="window.location.reload()">
+    <div class="buttonbox">
+        <button class="button" id="reset" type="reset" value="Reset" onClick="window.location.reload()">Reset</button>
+        <button class="button" id="black" onclick="blackColor()">Black</button>
+        <button class="button" id="color" onclick="crazyColor()">Random Colors</button>
+        <button class="button" id="gradient" onclick="gradientColor()">Gradient Colors</button></div>
     <div id="container"></div></div></div>
 </body>
 </html>
